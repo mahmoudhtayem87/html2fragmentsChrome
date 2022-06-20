@@ -1,0 +1,29 @@
+.crx_mouse_visited {
+    background-color: #bcd5eb !important;
+    outline: 1px solid #5166bb !important;
+}
+.swal2-container
+{
+    z-index: 99999!important;
+}
+.top
+{
+    position: fixed;
+    top: 10%!important;
+    left:1%;
+    width: 25%;
+    background-color: #2b669a;
+    color: white;
+    z-index: 9999;
+    opacity: 0.7;
+    padding: 1rem!important;
+}
+
+.show
+{
+    display: block;
+}
+.hide
+{
+    display: none;
+}

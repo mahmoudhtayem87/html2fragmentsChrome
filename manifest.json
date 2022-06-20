@@ -1,0 +1,35 @@
+{
+  "name": "Liferay HTML 2 Fragments Collection!",
+  "description": "A tool to help you to add the required html attributes to any html page you would like to convert it to fragments collection",
+  "version": "1.0.0.1",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["core.css"],
+      "js": ["core.js","popup.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/liferay16.png",
+      "32": "/images/liferay32.png",
+      "48": "/images/liferay48.png",
+      "128": "/images/liferay128.png"
+    }
+  },
+  "background": {
+    "service_worker": "script.js"
+  },
+  "permissions": [ "storage", "scripting"],
+  "icons": {
+    "16": "/images/liferay16.png",
+    "32": "/images/liferay32.png",
+    "48": "/images/liferay48.png",
+    "128": "/images/liferay128.png"
+  },
+  "author": "Mahmoud Hussein Tayem"
+}
