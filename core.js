@@ -152,9 +152,7 @@ document.addEventListener('mousemove', async function (e) {
     topper.setAttribute("id","topper");
     topper.classList.add("top");
     var status = await chrome.storage.sync.get("isActive");
-    if (!status.isActive)
-        return;
-    if (dontSelect)
+    if (!status.isActive || dontSelect)
         return;
     var srcElement = e.target;
     var stop = false;
@@ -200,11 +198,7 @@ document.addEventListener('mousemove', async function (e) {
 }, false);
 document.addEventListener('mousedown', async function (e) {
     var status = await chrome.storage.sync.get("isActive");
-    if (!status.isActive)
-        return;
-    if (dontSelect)
-        return;
-    if (e.buttons != 1)
+    if (!status.isActive || dontSelect || e.buttons != 1)
         return;
     dontSelect = true;
     var srcElement = e.target;
